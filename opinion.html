@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Ubuntu Unity</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-frontpage.css" rel="stylesheet">
+  
+  <script src="vendor/jquery/jquery.min.js"></script>
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ubuntu Unity</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">O Ubuntu Unity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="download.html">Pobierz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="opinion.html">Opinia</a>
+          </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="aboutUs.html">O nas</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 mb-5">
+          <p></p>
+        <p class="h1"> Twoja opinia o powłoce Unity</p>
+        <hr>
+        <div class="card">
+          <p class="h5 card-header font-italic">Twoje zdanie: </p>
+          <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="email">
+                        Twój email:
+                    </label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Wpisz email" required />
+                </div>
+                <div class="form-group">
+                    <label for="name">
+                        Imię i Nazwisko:
+                    </label>
+                    <input type="text" name="name" id="name" pattern="[A-ZŁ][a-złąśćńęóżź]{1,25} [A-ZŁ][a-złąśćńęóżź]{1,25}" class="form-control" placeholder="Wpisz Imię i nazwisko" required  />
+                </div>
+                <div class="form-group">
+                    <label for="number">Wersja Unity od której zacząłeś przygodę
+
+                    </label>
+                    <input type="number" name="number" id="number" class="form-control" placeholder="wersja Unity" required />
+                </div>
+                <div class="form-group">
+                    <label for="howLong1">
+                        Jak długo korzystasz z Unity?
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="howLong" id="howLong1" value="1" required>
+                        <label class="form-check-label" for="howLong1">
+                            1 rok
+                        </label>                      
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="howLong" id="howLong2" value="2" >
+                        <label class="form-check-label" for="howLong2">
+                            2-3 lata
+                        </label>                      
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="howLong" id="howLong3" value="3" >
+                        <label class="form-check-label" for="howLong3">
+                            Ponad 3 lata
+                        </label>                      
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="multipleChoice">
+                        Co Ci się podoba w Unity?
+                    </label>
+                    <select multiple class="form-control" id="multipleChoice" name="multipleChoice" required >
+                        <option>Nowoczesność</option>
+                        <option>Global menu</option>
+                        <option>global HUD</option>
+                        <option>Wsparcie HiDPI</option>
+                        <option>Przejrzystość</option>
+                        <option>Brak nawiązań do tradycyjnego środowiska</option>
+                        <option>Ciekawy Taskbar</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">
+                        Czy chcesz coś dodać?
+                    </label>
+                    <textarea class="form-control" id="comment" rows="3"> </textarea>
+                </div>
+                
+
+                <button type="submit" class="btn btn-outline-primary btn-lg" onclick="showData()">Wyślij!</button>
+                <button type="reset" class="btn btn-outline-secondary btn-lg" onclick="deleteStorage()">Czyść</button>
+                <button type="button" class="btn btn-outline-warning btn-lg" onclick="editStorage()">Przywróć</button>
+                <button type="button" class="btn btn-outline-danger btn-lg" onclick="deleteElement()">Usuń email</button>
+            </form>
+            
+          
+           
+          </div>
+        </div>
+        
+        
+      </div>
+     
+    </div>
+    <!-- /.row -->
+    
+
+        
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Grzegorz Cichocki 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
